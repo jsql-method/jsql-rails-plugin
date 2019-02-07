@@ -23,22 +23,30 @@ default: &default
 
 development:
   <<: *default
-  database: test_jsql_db
+  database: plugins_test
   username: postgres
   password: pgMjk6F#18P,5
   host: 46.41.138.32
   port: 5432
 test:
   <<: *default
-  database: test_jsql_db
+  database: plugins_test
   username: postgres
   password: pgMjk6F#18P,5
   host: 46.41.138.32
   port: 5432
 production:
   <<: *default
-  database: test_jsql_db
+  database: plugins_test
   username: postgres
   password: pgMjk6F#18P,5
   host: 46.41.138.32
+  port: 5432
+
+local:
+  <<: *default
+  database: plugins_test
+  username: postgres
+  password: pgMjk6F#18P,5
+  host: localhost
   port: 5432
